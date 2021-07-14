@@ -1,4 +1,4 @@
-# HSA-Academies-Coding-II-React-Example-Template - INSERT DATE
+# HSA-Academies-Coding-II-React-Example-Template - 7/12 to 7/16
 
 Here are all the React examples we've gone over so far. Feel free to go through the examples again and email us with any questions you might have. Happy coding!
 
