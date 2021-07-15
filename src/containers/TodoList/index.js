@@ -2,6 +2,7 @@ import React from 'react'
 import { useState } from 'react'
 import TodoItem from './components/TodoItem'
 import FormInput from './components/FormInput'
+import { Link } from 'react-router-dom'
 
 // const todos = ["Go driving", "Eat lunch", "Do homework", "Read a book"]
 
@@ -28,6 +29,9 @@ export const TodoList = () => {
         setValue={setNewItem}
       />
       <button onClick={addItem}>Add</button>
+      <button>
+        <Link to="/">Back to Home</Link>
+      </button>
     </div>
   )
 }
