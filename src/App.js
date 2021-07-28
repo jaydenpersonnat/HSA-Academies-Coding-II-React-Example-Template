@@ -1,18 +1,21 @@
 import React from 'react'
 import Home from './containers/Home'
 import { TodoList } from './containers/TodoList'
+import { BrowserRouter, Switch, Route } from 'react-router-dom'
 
 const username = "Clarissa"
 
 const App = () => (
-  <div className="App">
-    {(username) ? <Home name={username}/> : <Home name="stranger"/>}
-    {(3 < 5) ? <p>Math works!</p> : <p>Math doesn't work :(</p>}
-    <Home name="Andrew"/>
-    <TodoList/>
-    <TodoList/>
-    <TodoList/>
-  </div>
+  <BrowserRouter basename="/todo">
+    <div className="App">
+      <Switch>
+        <Route exact path="/">
+          {(username) ? <Home name={username}/> : <Home name="stranger"/>}
+        </Route>
+        <Route path="/list" component={TodoList}/>
+      </Switch>
+    </div>
+  </BrowserRouter>
 )
 
 export default App

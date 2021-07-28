@@ -1,5 +1,6 @@
 import React from 'react'
 import TodoItem from './components/TodoItem'
+import { Link } from 'react-router-dom'
 
 export const TodoList = () => {
   
@@ -14,6 +15,7 @@ export const TodoList = () => {
         <li>Blue fish</li>
       </ol>
       {todos.map((item, idx) => <TodoItem key={idx} item={item}/>)}
+      <Link to="/">Back to Home</Link>
     </div>
   )
 }
