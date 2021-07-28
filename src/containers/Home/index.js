@@ -1,11 +1,14 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import { Title, Subtitle, Page } from './styles'
 
 const Home = ({ name }) => (
-  <div>
-    <h1>Hello {name}!</h1>
+  <Page>
+    <Title primary>Hello {name}!</Title>
+    <Title>This is not a primary Title</Title>
+    <Subtitle>Welcome to my website!</Subtitle>
     <Link to="/list">Go to Todo List!</Link>
-  </div>
+  </Page>
 )
 
 export default Home
