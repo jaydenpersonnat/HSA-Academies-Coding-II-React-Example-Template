@@ -1,21 +1,17 @@
 import React from 'react'
+import { useState } from 'react'
 import TodoItem from './components/TodoItem'
 import { Link } from 'react-router-dom'
 
 export const TodoList = () => {
   
-  const todos = ["buy apple juice", "practice React", "read a book"]
+  // const todos = ["buy apple juice", "practice React", "read a book"]
+  const [todos, setTodos] = useState(["buy apple juice", "practice React", "read a book"])
 
   return (
-    <div>
-      <ol>
-        <li>One fish</li>
-        <li>Two fish</li>
-        <li>Red fish</li>
-        <li>Blue fish</li>
-      </ol>
-      {todos.map((item, idx) => <TodoItem key={idx} item={item}/>)}
+    <>
+      {todos.map((item, idx) => <TodoItem key={idx} idx={idx} item={item} todos={todos} setTodos={setTodos}/>)}
       <Link to="/">Back to Home</Link>
-    </div>
+    </>
   )
 }
