@@ -1,21 +1,19 @@
 import styled from 'styled-components'
 
 export const Title = styled.h1`
-  color: ${props => props.primary ? 'palevioletred' : 'orange'};
+  color: ${props => props.primary ? props.theme.titleColor : props.theme.textColor};
   text-align: center;
   font-style: bold;
-  font-size: ${props => props.primary ? '40pt' : '30pt'};
-  font-family: sans-serif;
-  
+  font-size: ${props => props.primary ? props.theme.size.title : props.theme.size.subtitle};
+  font-family: ${({theme}) => theme.font};
 `
 
 export const Subtitle = styled(Title)`
   font-style: italic;
-  font-size: 20pt;
-  color: black;
+  font-size: ${({theme}) => theme.size.subtitle};
+  color: ${({theme}) => theme.titleColor};
 `
 
-
 export const Page = styled.div`
-  background-color: lightblue;
+  background-color: ${({theme}) => theme.pageColor};
 `

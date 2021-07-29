@@ -9,7 +9,6 @@ const TodoItem = ({ idx, item, todos, setTodos }) => {
     let newTodos = todos.slice()
     newTodos.splice(idx, 1)
     setTodos(newTodos)
-
   }
 
   return (
