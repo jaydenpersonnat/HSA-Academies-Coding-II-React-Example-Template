@@ -7,6 +7,7 @@ const Home = ({ name }) => (
     <Title primary>Hello {name}!</Title>
     <Title className="testing">This is not a primary Title</Title>
     <Subtitle>Welcome to my website!</Subtitle>
+    <img src="https://icatcare.org/app/uploads/2018/07/Thinking-of-getting-a-cat.png"/>
     <Link to="/list">Go to Todo List!</Link>
   </Page>
 )

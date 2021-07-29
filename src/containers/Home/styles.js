@@ -16,4 +16,5 @@ export const Subtitle = styled(Title)`
 
 export const Page = styled.div`
   background-color: ${({theme}) => theme.pageColor};
+  /* background: url('https://icatcare.org/app/uploads/2018/07/Thinking-of-getting-a-cat.png') */
 `
