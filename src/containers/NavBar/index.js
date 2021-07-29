@@ -1,18 +1,15 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
-import { Title, Subtitle, Page, NavBar, StyledButton, StyledLink, Centered } from './styles'
-import { useState } from 'react'
+import { StyledLink, NavContainer } from '../Home/styles'
 
 const NavBar = () => {
 
   return (
-    <>
-      <StyledLink to="/list">Go to Todo List!</StyledLink>
-      <StyledButton>
-        <Link to="/about">Go to About</Link>
-      </StyledButton>
-    </>
+    <NavContainer>
+      <StyledLink to="/">Home</StyledLink>
+      <StyledLink to="/list">Todo List</StyledLink>
+      <StyledLink to="/about">About</StyledLink>
+    </NavContainer>
   )
 }
 
-export default Home
+export default NavBar

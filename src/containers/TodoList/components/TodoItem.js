@@ -1,4 +1,7 @@
 import React from 'react'
+import { Text, StyledButton } from '../../Home/styles'
+import StyledItem from './styles'
+
 
 const TodoItem = ({ idx, item, todos, setTodos }) => {
   
@@ -12,9 +15,9 @@ const TodoItem = ({ idx, item, todos, setTodos }) => {
   }
 
   return (
-    <div>
-      <li>{item}</li>
-      <button onClick={finishItem}>Done!</button>
+    <div style={{display: 'flex', margin: '15px'}}>
+      <StyledItem as='li'>{item}</StyledItem>
+      <StyledButton onClick={finishItem}>Done!</StyledButton>
     </div>
   )
 }

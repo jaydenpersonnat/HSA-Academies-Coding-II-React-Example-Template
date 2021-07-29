@@ -1,9 +1,9 @@
 import React from 'react'
 import { useState } from 'react'
 import TodoItem from './components/TodoItem'
-import { Link } from 'react-router-dom'
 import FormInput from './components/FormInput'
-import { Title } from '../Home/styles'
+import { Title, StyledButton } from '../Home/styles'
+import NavBar from '../NavBar'
 
 export const TodoList = () => {
   
@@ -19,11 +19,11 @@ export const TodoList = () => {
 
   return (
     <>
+      <NavBar/>
       <Title>To-Do:</Title>
       {todos.map((item, idx) => <TodoItem key={idx} idx={idx} item={item} todos={todos} setTodos={setTodos}/>)}
       <FormInput type="text" placeholder="Enter a To-Do" value={newItem} setValue={setNewItem}/>
-      <button onClick={addItem}>Add Item</button>
-      <Link to="/">Back to Home</Link>
+      <StyledButton onClick={addItem}>Add Item</StyledButton>
     </>
   )
 }

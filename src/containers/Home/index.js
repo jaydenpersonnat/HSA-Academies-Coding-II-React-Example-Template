@@ -1,21 +1,14 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { Title, Subtitle, Page, NavBar, StyledButton, StyledLink, Centered } from './styles'
+import { Title, Subtitle, Page, StyledButton, StyledLink, Centered } from './styles'
 import { useState } from 'react'
+import NavBar from '../NavBar'
 
 const Home = ({ name }) => {
 
   return (
     <>
-    <NavBar>
-      <StyledLink to="/list">Go to Todo List!</StyledLink>
-      <br/>
-      <br/>
-      <StyledButton>
-        <Link to="/about">Go to About</Link>
-      </StyledButton>
-      <br/>
-    </NavBar>
+    <NavBar/>
     <Page>
       <Title primary>Hello {name}!</Title>
       <Subtitle>Welcome to my website!</Subtitle>

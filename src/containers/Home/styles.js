@@ -12,26 +12,40 @@ export const Title = styled.h1`
 export const Subtitle = styled(Title)`
   font-style: italic;
   font-size: ${({theme}) => theme.size.subtitle};
-  color: ${({theme}) => theme.titleColor};
+  color: ${({theme}) => theme.color.title};
 `
 
 export const Page = styled.div`
-  background-color: skyblue;
+  background-color: ${({theme}) => theme.color.insert};
+  color: ${({theme}) => theme.color.text}
   /* background: url('https://icatcare.org/app/uploads/2018/07/Thinking-of-getting-a-cat.png') */
 `
 
-export const NavBar = styled.div`
+export const NavContainer = styled.div`
   display: flex;
   justify-content: center;
-  background-color: skyblue;
+  background-color: ${({theme}) => theme.color.insert};
   padding: 30px;
-
 `
+
+export const TwoCol = styled.div`
+  display: flex;
+  justify-content: center;
+`
+
+export const Text = styled.p`
+  color: ${({theme}) => theme.color.text};
+  font-family: ${({theme}) => theme.font};
+  font-size: ${({theme}) => theme.size.text};
+  margin: 50px;
+  text-align: left;
+`
+
 export const StyledButton = styled.button`
   padding: 10px;
-  margin: 1px;
+  margin: auto 20px;
   border-radius: 10px;
-  background-color: pink;
+  background-color: ${({theme}) => theme.color.insert};
   transition: 0.3s;
   font-family: ${({theme}) => theme.font};
 
@@ -43,14 +57,17 @@ export const StyledButton = styled.button`
 `
 export const StyledLink = styled(Link)`
   padding: 10px 5px 10px 5px;
+  margin: auto 20px;
   border: outset 2px gray;
   border-radius: 10px;
-  background-color: pink;
+  background-color: ${({theme}) => theme.color.light};
+  color: ${({theme}) => theme.color.dark};
   transition: 0.3s;
   font-family: ${({theme}) => theme.font};
 
   &:hover {
-    background-color: red;
+    background-color: ${({theme}) => theme.color.dark};
+    color: ${({theme}) => theme.color.light};
     border-radius: 20px;
   }
 `
