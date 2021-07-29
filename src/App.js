@@ -1,11 +1,11 @@
 import React from 'react'
 import Home from './containers/Home'
 import { TodoList } from './containers/TodoList'
+import About from './containers/About'
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
 import theme from './theme'
 import { ThemeProvider } from 'styled-components'
 
-const username = "Clarissa"
 
 const App = () => (
   <BrowserRouter basename="/todo">
@@ -13,9 +13,12 @@ const App = () => (
       <div className="App">
         <Switch>
           <Route exact path="/">
-            {(username) ? <Home name={username}/> : <Home name="stranger"/>}
+            <Home/>
           </Route>
           <Route path="/list" component={TodoList}/>
+          <Route path="/about">
+            <About/>
+          </Route>
         </Switch>
       </div>
     </ThemeProvider>
