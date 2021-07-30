@@ -8,3 +8,7 @@ const StyledItem = styled.li`
 `
 
 export default StyledItem
+
+export const Container = styled.div`
+  background-color: ${({theme}) => theme.color.insert};
+`

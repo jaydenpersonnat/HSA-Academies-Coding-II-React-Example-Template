@@ -3,7 +3,7 @@
 const theme = {
   color: {
     page: '#94d4f2',
-    insert: '#8cc9e6',
+    insert: 'rgba(142, 202, 230, 0.5)',
     title: '#4f2273',
     text: '#141b33',
     light: '#a8e3ff',

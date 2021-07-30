@@ -45,13 +45,14 @@ export const StyledButton = styled.button`
   padding: 10px;
   margin: auto 20px;
   border-radius: 10px;
-  background-color: ${({theme}) => theme.color.insert};
+  background-color: ${({theme}) => theme.color.light};
   transition: 0.3s;
   font-family: ${({theme}) => theme.font};
 
   &:hover {
-    background-color: red;
+    background-color: blue;
     border-radius: 20px;
+    color: white;
   }
 
 `
