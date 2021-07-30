@@ -54,17 +54,17 @@ export const StyledButton = styled.button`
     border-radius: 20px;
     color: white;
   }
-
 `
+
 export const StyledLink = styled(Link)`
-  padding: 10px 5px 10px 5px;
-  margin: auto 20px;
-  border: outset 2px gray;
-  border-radius: 10px;
-  background-color: ${({theme}) => theme.color.light};
-  color: ${({theme}) => theme.color.dark};
-  transition: 0.3s;
-  font-family: ${({theme}) => theme.font};
+padding: 10px 5px 10px 5px;
+margin: auto 20px;
+border: outset 2px gray;
+border-radius: 10px;
+background-color: ${({theme}) => theme.color.light};
+color: ${({theme}) => theme.color.dark};
+transition: 0.3s;
+font-family: ${({theme}) => theme.font};
 
   &:hover {
     background-color: ${({theme}) => theme.color.dark};
