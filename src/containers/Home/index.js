@@ -1,5 +1,9 @@
 import React from 'react'
 
-const Home = () => (
-  {/* TODO */}
+const Home = ({name}) => (
+  <div>
+    Hello, {name}! Welcome to my webpage! 
+  </div>
 )
+
+export default Home 

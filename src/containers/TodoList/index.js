@@ -1,5 +1,8 @@
 import React from 'react'
+import TodoItem from './TodoItem'
 
 const TodoList = () => (
-  {/* TODO */}
+  { TodoItem }
 )
+
+export default TodoList
